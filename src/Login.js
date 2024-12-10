@@ -4,11 +4,14 @@ import Typography from '@mui/material/Typography'
 import LoginForm from './LoginForm'
 import LOGIN_MUTATION from './queries/loginMutation'
 import { Button } from '@mui/material/'
+import client from './apollo' // Adjust the import path as necessary
 
 const LoginPage = ({ token, setToken }) => {
   const [login, { loading, error }] = useMutation(LOGIN_MUTATION)
 
   const handleLogin = ({ email, password }) => {
+    sessionStorage.removeItem('token')
+
     login({
       variables: {
         email,
@@ -19,6 +22,7 @@ const LoginPage = ({ token, setToken }) => {
         let token = res.data.signIn.token
         sessionStorage.setItem('token', token)
         setToken(token)
+        client.resetStore()
       })
       .catch((err) => {
         console.log(err)
