@@ -19,7 +19,6 @@ const LoginPage = ({ token, setToken }) => {
         let token = res.data.signIn.token
         sessionStorage.setItem('token', token)
         setToken(token)
-        console.log(token)
       })
       .catch((err) => {
         console.log(err)

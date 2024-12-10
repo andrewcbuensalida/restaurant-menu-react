@@ -18,14 +18,13 @@ import GET_ALL_PRODUCTS from './queries/getAllProducts'
 import MenuTable from './MenuTable'
 
 function App() {
+  const [token, setToken] = useState(sessionStorage.getItem('token') || null)
   const { loading, error, data } = useQuery(GET_ALL_USERS)
   const {
     loading: loadingProducts,
     error: errorProducts,
     data: dataProducts,
   } = useQuery(GET_ALL_PRODUCTS)
-
-  const [token, setToken] = useState(sessionStorage.getItem('token') || null)
 
   if (!token || error) return <Login token={token} setToken={setToken} />
   if (loading) return <p>Loading...</p>
