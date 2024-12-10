@@ -27,9 +27,8 @@ function App() {
 
   const [token, setToken] = useState(sessionStorage.getItem('token') || null)
 
-  if (!token) return <Login token={token} setToken={setToken} />
+  if (!token || error) return <Login token={token} setToken={setToken} />
   if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
 
   return (
     <Container>
