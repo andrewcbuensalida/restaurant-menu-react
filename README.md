@@ -1,3 +1,7 @@
+The backend is located at https://github.com/andrewcbuensalida/PSQL-Express-React-Node-GraphQL-Apollo.git
+
+To access the app, go to https://main.d270tnz1kj6wbf.amplifyapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
