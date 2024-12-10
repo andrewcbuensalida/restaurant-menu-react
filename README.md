@@ -1,4 +1,5 @@
 The backend is located at https://github.com/andrewcbuensalida/PSQL-Express-React-Node-GraphQL-Apollo.git
+The front end at https://github.com/andrewcbuensalida/restaurant-menu-react.git
 
 To access the app, go to https://main.d270tnz1kj6wbf.amplifyapp.com/
 
